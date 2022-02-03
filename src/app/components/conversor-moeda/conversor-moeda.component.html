@@ -1,0 +1,33 @@
+
+<h2>Conversor de Moedas</h2>
+<form class="row gy-2 gx-3 align-items-center">
+    <div class="col-auto">
+        <div class="form-floating">
+            <select class="form-select" id="inputMoedaDe" (change)="selecionarMoedaDe($event)">
+                <option value="BRL">Real Brasileiro</option>
+                <option selected value="USD">Dólar Americano</option>
+                <option value="EUR">Euro</option>
+            </select>
+            <label for="inputMoedaDe">De</label>
+        </div>
+    </div>
+
+    <div class="col-auto">
+        <div class="form-floating">
+            <input type="number" class="form-control" id="inputDe" [value]="valorDe" (change)="selecionarValorDe($event)">
+            <label for="inputDe">Valor</label>
+        </div>
+    </div>
+    <div class="col-auto form-floating">
+        <select class="form-select" id="inputMoedaPara" (change)="selecionarMoedaPara($event)">
+          <option selected value="BRL">Real Brasileiro</option>
+          <option value="USD">Dólar Americano</option>
+          <option value="EUR">Euro</option>
+        </select>
+        <label for="inputMoedaPara">Para</label>
+      </div>
+      <div class="col-auto form-floating">
+          <input type="text" class="form-control" readonly id="inputPara" [value]="valorPara">
+        <label for="input-group">Resultado</label>
+      </div>
+</form>
